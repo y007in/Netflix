@@ -22,6 +22,7 @@
     "react-router-dom": "^6.14.1",
     "react-scripts": "5.0.1",
     "react-spinners": "^0.13.8",
+    "redux": "^4.2.1",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.2",
     "web-vitals": "^2.1.4"
@@ -31,12 +32,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [

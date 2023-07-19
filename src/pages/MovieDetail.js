@@ -14,7 +14,10 @@ import {
 const MovieDetail = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { genreList, loading } = useSelector((state) => state.movie);
+  const { genreList, creditList, loading } = useSelector(
+    (state) => state.movie
+  );
+
   const movieItem = location.state.value.item;
   const [showDetail, setShowDetail] = useState(false);
   const [isLike, setIsLike] = useState(false);

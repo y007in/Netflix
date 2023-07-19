@@ -4,15 +4,20 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const MovieCard = ({ id, item }) => {
-  const { genreList } = useSelector((state) => state.movie);
+  const { genreList, creditList } = useSelector((state) => state.movie);
 
   const navigate = useNavigate();
   const goDetail = () => {
     navigate(`/movies/${id}`, {
-      state: { value: { item }, genreContents: { genreList } },
+      state: {
+        value: { item },
+        genreContents: { genreList },
+        credit: { creditList },
+      },
     });
   };
   console.log(item);
+  console.log(creditList);
   return (
     <div
       className="card"
