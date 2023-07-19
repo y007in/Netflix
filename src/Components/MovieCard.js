@@ -8,7 +8,9 @@ const MovieCard = ({ id, item }) => {
 
   const navigate = useNavigate();
   const goDetail = () => {
-    navigate(`/movies/${id}`, { state: item });
+    navigate(`/movies/${id}`, {
+      state: { value: { item }, genreContents: { genreList } },
+    });
   };
   console.log(item);
   return (
@@ -33,7 +35,9 @@ const MovieCard = ({ id, item }) => {
         </div>
         <div>
           <span>{item.vote_average}</span>
-          <span>{item.adult ? "청불" : "Under 18"} </span>
+          <span>
+            {item.adult ? "만 18세 이하 관람불가" : "만 15세 이상 관람 가능"}{" "}
+          </span>
         </div>
       </div>
     </div>
